@@ -1,4 +1,6 @@
-Final Project
+
+
+
 
 function Show-Menu
 {
@@ -15,6 +17,57 @@ function Show-Menu
     Write-Host
     Write-Host "5: Number of currently active network connections"
     Write-Host
-    Write-Host "B: Press 'B' to go back."
+    Write-Host "Press X to exit."
     Write-Host
 }
+
+function optionOne
+{
+    Write-Output "Primero"
+    Read-Host "Press enter to continue"
+}
+
+function optionTwo
+{
+    Write-Output "2"
+    Read-Host "Press enter to continue"
+}
+
+function optionThree
+{
+    Write-Output "3"
+    Read-Host "Press enter to continue"
+}
+
+function optionFour
+{
+    Write-Output "4"
+    Read-Host "Press enter to continue"
+}
+
+function optionFive
+{
+    Write-Output "5"
+    Read-Host "Press enter to continue"
+}
+
+
+
+$exit=$True
+
+while($exit){
+    Show-Menu
+    $selection = Read-Host "Choose an option"
+        Write-Output $selection
+    switch($selection)
+    {
+        '1'{ optionOne }
+        '2'{ optionTwo }
+        '3'{ optionThree }
+        '4'{ optionFour }
+        '5'{ optionFive }
+        'X'{ $exit=$False}
+    }
+    
+}
+
