@@ -23,13 +23,13 @@ function Show-Menu
 
 function optionOne
 {
-    Write-Output "Primero"
+    Get-Process | sort -descending -property CPU | select -First 5
     Read-Host "Press enter to continue"
 }
 
 function optionTwo
 {
-    Write-Output "2"
+    Get-Disk | ft -Property FriendlyName
     Read-Host "Press enter to continue"
 }
 
@@ -58,7 +58,6 @@ $exit=$True
 while($exit){
     Show-Menu
     $selection = Read-Host "Choose an option"
-        Write-Output $selection
     switch($selection)
     {
         '1'{ optionOne }
