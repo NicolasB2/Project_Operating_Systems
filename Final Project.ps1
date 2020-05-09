@@ -44,8 +44,19 @@ function optionThree
 
 function optionFour
 {
-    Write-Output "4"
-    Read-Host "Press enter to continue"
+
+    $tmaximo = systeminfo | select-string "Memoria virtual: tama¤o m ximo:"
+    Write-Output $tmaximo
+
+    $tuso = systeminfo | select-string "Memoria virtual: en uso:"
+    Write-Output $tuso
+
+    $fisica = systeminfo | select-string "Memoria f¡sica disponible:"
+    Write-Output $fisica
+
+    $memoriaF = systeminfo | select-string "Cantidad total de memoria f¡sica:"
+    Write-Output $memoriaF 
+    
 }
 
 function optionFive
