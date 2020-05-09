@@ -1,6 +1,23 @@
 
 
+<#
+.SYNOPSIS
+This project consists of a tool that provides a series of commands to facilitate the tasks of the administrator of a data center.
 
+.DESCRIPTION
+This project contains a menu with the following options:            
+1: Five processes that are consuming the most CPU.
+2: Filesystems or disks connected to the machine.
+3: Name and size of the largest file stored on a disk or filesystem.
+4: Amount of free memory and amount of swap space in use.
+5: 5: Number of currently active network connections
+x: Press X to exit.
+
+
+.EXAMPLE
+press 3 after write a full path
+3 -> D: 
+#>
 
 function Show-Menu
 {
@@ -17,7 +34,7 @@ function Show-Menu
     Write-Host
     Write-Host "5: Number of currently active network connections"
     Write-Host
-    Write-Host "Press X to exit."
+    Write-Host "x: Press X to exit."
     Write-Host
 }
 
