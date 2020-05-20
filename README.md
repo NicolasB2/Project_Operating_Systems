@@ -1,8 +1,8 @@
 # Project_Operating_Systems
 
 ## Developers:
-### - Nicolás Biojo 
-### - David Erazo
+- Nicolás Biojo 
+- David Erazo
 
 ## Execution:
 ```powershell 
